@@ -1,0 +1,5 @@
+# Verhindere den direkten Zugriff auf Verzeichnisse außerhalb von public
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L,QSA]
